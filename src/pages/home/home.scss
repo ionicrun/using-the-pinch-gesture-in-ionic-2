@@ -1,3 +1,8 @@
 page-home {
-
+    
+    // disable the overflow during the pinch event
+    ion-content.disable-scrolling .scroll-content {
+        overflow-y: hidden;
+    }
+        
 }

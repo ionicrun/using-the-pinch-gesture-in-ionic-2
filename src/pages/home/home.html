@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      {{ fontSize }}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding
+             [class.disable-scrolling]='isScaling'
+             [style.fontSize]="fontSize">
+
+  <div pinch
+       (pinchstart)="onPinchStart($event)"
+       (pinchend)="onPinchEnd($event)"
+       (pinchmove)="onPinchMove($event)">
+
+    <p *ngFor="let i of [0,1,2,3,4,5];">
+      <strong>Chapter {{ i + 1 }}: </strong>Suspendisse risus libero, pharetra quis facilisis a, dictum non tortor. Duis eu metus
+      bibendum, porta lectus convallis, iaculis est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus. Praesent ac nibh non diam molestie pharetra ut sit amet nulla. Phasellus id ullamcorper arcu. Fusce
+      vehicula, magna vel feugiat tincidunt, sem orci dapibus mi, sit amet vestibulum lorem augue a erat. Vestibulum sed
+      scelerisque augue. Vestibulum porta sem ac rhoncus condimentum. Donec velit erat, ultrices vitae ullamcorper sit amet,
+      tempus sed purus. Donec sed sapien mauris. Sed velit lacus, lacinia eu nisi ut, posuere pulvinar urna. Integer eget
+      mi sollicitudin, imperdiet odio et, pretium massa. Aliquam sed tellus a neque bibendum tempus a sed dolor. Sed justo
+      metus, venenatis sit amet vestibulum fringilla, vestibulum eget lectus. Donec a nibh justo.</p>
+
+  </div>
+
 </ion-content>
