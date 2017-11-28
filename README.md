@@ -19,7 +19,7 @@ $ ionic cordova platform add android ios
 
 ## Done
 
-You're all set! Go ahead and serve or run the App and see the YouTube UI build with Ionic 2+ in action!
+You're all set! Go ahead and serve or run the App and see the Using the Pinch Gesture in Ionic 2+ in action!
 
 ```bash
 $ ionic serve
